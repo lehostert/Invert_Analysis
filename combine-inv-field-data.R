@@ -20,5 +20,6 @@ INV_dataset$Jab_Collector<- if_else(str_detect(INV_dataset$Jab_Collector, "bm"),
 INV_dataset$Jab_Collector<- if_else(str_detect(INV_dataset$Jab_Collector, "brian metzke"), "bmetzke", INV_dataset$Jab_Collector)
 INV_dataset$Jab_Collector<- if_else(str_detect(INV_dataset$Jab_Collector, "ld"), "ldrake", INV_dataset$Jab_Collector)
 INV_dataset$Jab_Collector<- if_else(str_detect(INV_dataset$Jab_Collector, "levi"), "ldrake", INV_dataset$Jab_Collector)
+INV_dataset$Event_Date <- as.Date(INV_dataset$Event_Date)
 
 write_excel_csv(INV_dataset, path = "//INHS-Bison/ResearchData/Groups/Kaskaskia_CREP/Data/Data_IN/DB_Ingest/INV_2013-2017.csv") 
